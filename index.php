@@ -1,5 +1,4 @@
 <?php	
-	//die($_SERVER['DOCUMENT_ROOT']);	
 	$DOCUMENT_ROOT = '/home/renfozf385/domains/rmfokkema.nl/public_html';
 	
 	if (isset($_POST["t"])) $t = $_POST["t"];
@@ -29,12 +28,6 @@
 	
 	<link rel="shortcut icon" href="./icons/<?= rand(1,9).".ico" ?>" />	
 	<link rel="apple-touch-icon" href="./touch/<?= rand(1,9).".png" ?>" />
-	
-<!--
-	<link rel="shortcut icon" href="./icon.ico" />
-	<link rel="apple-touch-icon" href="./touch.png" />
--->
-	
 	<link rel="apple-touch-icon-precomposed" href="./prec.png" />
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />

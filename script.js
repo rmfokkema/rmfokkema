@@ -47,18 +47,13 @@ function checkc(event)
 		if (textEditable) focusToEnd();
 	}
 	if (event.keyCode==27) {
-		//if (textCollection.length>1) {
 		if (textCollection.length==1) {
 			main.innerHTML = '';
 			main.focus();
 			return;
 		}
 		
-		textCollection.pop();
-		//} else {
-		//	textCollection = [''];
-		//}
-		
+		textCollection.pop();		
 		newText = textCollection[textCollection.length-1];
 		dong();
 	}
