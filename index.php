@@ -1,16 +1,18 @@
-<?php
+<?php	
+	//die($_SERVER['DOCUMENT_ROOT']);	
+	$DOCUMENT_ROOT = '/home/renfozf385/domains/rmfokkema.nl/public_html';
 	
 	if (isset($_POST["t"])) $t = $_POST["t"];
 	if (isset($_GET["t"])) $t = $_GET["t"];
 	
 	if (isset($t)) {
-		$f = fopen($_SERVER['DOCUMENT_ROOT']."/text.log", "rw");
+		$f = fopen($DOCUMENT_ROOT."/text.log", "w");
 		fwrite($f, $t);
 		fclose($f);
+		
+		header('Location: /');
 		exit;
 	}
-	
-	exit;
 	
 	$currentText = file_get_contents("text.log");
 	$titles = array('Vet handig, G.r', 'Allerhandigst', 'Allerhandgiszt!', 'Allerhandigste!', 'Allerhandigst. Duh.', 'Allerhandigstu', 'Allerhandigs-duh.', 'Allerhandigstduh.');
@@ -25,7 +27,7 @@
 	<meta name="author" content="René" />
 	<meta name="description" content="<?= $currentText ?>" />
 	
-	<link rel="icon" href="./icons/<?= rand(1,9).".ico" ?>" />	
+	<link rel="shortcut icon" href="./icons/<?= rand(1,9).".ico" ?>" />	
 	<link rel="apple-touch-icon" href="./touch/<?= rand(1,9).".png" ?>" />
 	
 <!--
